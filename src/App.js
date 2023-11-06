@@ -5,7 +5,7 @@ export default function AuthorBooks() {
 
   useEffect(()=>{
   const authorWorksUrl = 'https://openlibrary.org/authors/OL23919A/works.json';
-  fetch(authorWorksUrl)
+  fetch(authorWorksUrl,{method: "GET"})
   .then((response)=>response.json())
   .then(data=>{
     setAuthorWorks(data.entries)
