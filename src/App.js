@@ -5,22 +5,18 @@ export default function AuthorBooks() {
   const [author, setAuthor] = useState(" ");
 
   useEffect(()=>{
-  const authorWorksUrl = 'https://openlibrary.org/authors/OL23919A/works.json';
-  const authroUrl = 'https://openlibrary.org/authors/OL23919A.json';
+  const authorWorksUrl = 'https://openlibrary.org/authors/OL23919A/works.json?limit=200';
+
   fetch(authorWorksUrl,{method: "GET"})
   .then((response)=>response.json())
   .then(data=>{
     setAuthorWorks(data.entries)
   })
-  fetch(authroUrl,{method: "GET"})
-  .then((response)=>response.json())
-  .then(data=>{
-    setAuthor(data.personal_name)
-  })
+
   });
   return (
     <div>
-      <h1>{author}'s Books</h1>
+      <h1>Books</h1>
       <div className="table-container">
         <table>
           <thead>
