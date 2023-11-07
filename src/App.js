@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 export default function AuthorBooks() {
   const [authorWorks, setAuthorWorks] = useState([]);
-  const [author, setAuthor] = useState(" ");
-
+  //
   useEffect(()=>{
   const authorWorksUrl = 'https://openlibrary.org/authors/OL23919A/works.json?limit=200';
 
