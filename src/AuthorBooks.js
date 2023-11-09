@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import BookRating from "./BookRating";
+
 export default function AuthorBooks() {
   const [author_Works, setAuthorWorks] = useState([]);
   const [author, setAuthor] = useState("");
@@ -38,6 +40,7 @@ export default function AuthorBooks() {
         .then((response) => response.json())
         .then((data) => {
           setAuthorWorks(data.entries);
+          console.log(data);
         });
 
       fetch(authorUrl, { method: "GET" })
@@ -64,12 +67,16 @@ export default function AuthorBooks() {
               <thead>
                 <tr>
                   <th>Title</th>
+                  <th>Ratings</th>
                 </tr>
               </thead>
               <tbody>
                 {author_Works.map((work) => (
                   <tr>
                     <td>{work.title}</td>
+                    <td>
+                      <BookRating key={`rating${work.key}`} openLibraryKey={work.key} />
+                    </td>
                   </tr>
                 ))}
               </tbody>
