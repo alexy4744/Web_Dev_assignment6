@@ -38,10 +38,10 @@ export default function AuthorBooks({ Author_Key }) {
               </thead>
               <tbody>
                 {author_Works.map((work) => (
-                  <tr>
+                  <tr key={work.key}>
                     <td>{work.title}</td>
                     <td>
-                      <BookRating key={`rating${work.key}`} openLibraryKey={work.key} />
+                      <BookRating openLibraryKey={work.key} />
                     </td>
                   </tr>
                 ))}

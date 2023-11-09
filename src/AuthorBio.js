@@ -18,11 +18,11 @@ export default function AuthorBio({ Author_Key, size = "M" }) {
   }, [Author_Key]);
 
   return (
-    <div class="bioSection">
+    <div className="bioSection">
       <div style={{ paddingRight: "20px" }}>
         <img src={`https://covers.openlibrary.org/a/olid/${Author_Key}-${size}.jpg`} />
       </div>
-      {authorBio && <p class="bio">{authorBio}</p>}
+      {authorBio && <p className="bio">{authorBio}</p>}
     </div>
   );
 }
