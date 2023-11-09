@@ -10,7 +10,9 @@ export default function AuthorBio({ Author_Key, size = "M" }) {
       fetch(authorUrl, { method: "GET" })
         .then((response) => response.json())
         .then((data) => {
-          setAuthorBio(data.bio || "No biography available.");
+          setAuthorBio(
+            data.bio && data.bio.value ? data.bio.value : data.bio || "No biography available."
+          );
         });
     }
   }, [Author_Key]);
