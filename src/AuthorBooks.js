@@ -6,7 +6,7 @@ export default function AuthorBooks({ Author_Key }) {
   const [author, setAuthor] = useState("");
 
   useEffect(() => {
-    const authorWorksUrl = `https://openlibrary.org/authors/${Author_Key}/works.json?limit=15`;
+    const authorWorksUrl = `https://openlibrary.org/authors/${Author_Key}/works.json?limit=10`;
     const authorUrl = `https://openlibrary.org/authors/${Author_Key}.json`;
 
     if (Author_Key) {
@@ -38,10 +38,10 @@ export default function AuthorBooks({ Author_Key }) {
               </thead>
               <tbody>
                 {author_Works.map((work) => (
-                  <tr>
+                  <tr key={work.key}>
                     <td>{work.title}</td>
                     <td>
-                      <BookRating key={`rating${work.key}`} openLibraryKey={work.key} />
+                      <BookRating openLibraryKey={work.key} />
                     </td>
                   </tr>
                 ))}

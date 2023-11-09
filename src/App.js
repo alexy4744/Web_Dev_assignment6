@@ -28,12 +28,12 @@ export default function App() {
 
   return (
     <main>
-      <div class="searchBar">
-        <label style={{marginRight: "6px"}}>
-          Enter Author's Name:
-        </label>
+      <div className="searchBar">
+        <label style={{ marginRight: "6px" }}>Enter Author's Name:</label>
         <input type="text" value={User_Input} onChange={(name) => setName(name.target.value)} />
-        <button style={{marginLeft: "6px"}} onClick={() => Clicked(true)}>Search</button>
+        <button style={{ marginLeft: "6px" }} onClick={() => Clicked(true)}>
+          Search
+        </button>
       </div>
       {Author_Key && (
         <>
