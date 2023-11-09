@@ -31,3 +31,12 @@ This endpoint was used to fetch the author's bio after a user search.
 The endpoint above returns the rating of a specific work, in this case the ID of the work is OL45804W. The average rating returned from this API call is used to display the star ratings of each work after the user has searched for an author.
 
 <img src='ratings_api.png' title='Screenshot of a successful API call to the ratings endpoint.' alt='Screenshot of a successful API call to the ratings endpoint.' />
+
+### Random Book API
+
+[Documentation Link](https://openlibrary.org/dev/docs/api/subjects)
+
+#### Endpoint: https://openlibrary.org/subjects/fiction.json?limit=20
+This API endpoint https://openlibrary.org/subjects/fiction.json?limit=20 returns a JSON object that contains information about books categorized under the subject 'fiction' and should contain no more than 20 items.
+
+<img src='random-api.png' title='Screenshot of a successful API call to the ratings endpoint.' alt='Screenshot of a successful API call to the ratings endpoint.' />
