@@ -6,7 +6,7 @@ export default function AuthorBooks({ Author_Key }) {
   const [author, setAuthor] = useState("");
 
   useEffect(() => {
-    const authorWorksUrl = `https://openlibrary.org/authors/${Author_Key}/works.json?limit=15`;
+    const authorWorksUrl = `https://openlibrary.org/authors/${Author_Key}/works.json?limit=10`;
     const authorUrl = `https://openlibrary.org/authors/${Author_Key}.json`;
 
     if (Author_Key) {
