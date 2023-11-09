@@ -9,6 +9,8 @@ The url above fetech the all the book the author had, identifier key in this cas
 The url above search the author, identifier key in this case are j%20k%20rowling(Basically author's name). Instruction are in this website
 https://openlibrary.org/dev/docs/api/authors.This API contain the key which can be used as a parameter in other openlibrary API
 
+<img src='author_api.png' title='Postman img2' width='' alt='postman2' />
+
 
 ## Link to the webpage: https://shion1314.github.io/Web_Dev_assignment5/
 
