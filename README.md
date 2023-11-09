@@ -1,15 +1,25 @@
-## Open Library API
+## Open Library
 
-### https://openlibrary.org/authors/OL23919A/works.json
+### Author API
+
+[Documentation Link](https://openlibrary.org/dev/docs/api/authors)
+
+#### Endpoint: https://openlibrary.org/authors/OL23919A/works.json
 The url above fetech the all the book the author had, identifier key in this case are OL23919A. Identifier key can be find in open Library.Instruction are in this website https://openlibrary.org/dev/docs/api/authors. Could use https://openlibrary.org/authors/OL23919A/works.json?limit={value} to limit the amount of work outputed, as default its 50.
 
 <img src='Screenshot 2023-11-07 at 4.09.08 PM.png' title='Postman img' width='' alt='postman' />
 
-### https://openlibrary.org/search/authors.json?q=j%20k%20rowling
+#### Endpoint: https://openlibrary.org/search/authors.json?q=j%20k%20rowling
 The url above search the author, identifier key in this case are j%20k%20rowling(Basically author's name). Instruction are in this website
 https://openlibrary.org/dev/docs/api/authors. This API contain the key which can be used as a parameter in other openlibrary API
 
 <img src='author_api.png' title='Postman img2' width='' alt='postman2' />
+
+#### Endpoint: https://openlibrary.org/authors/{olid}.json
+The url above fetch information about the author, identifier key the `olid` assigned to the author you want to search and is fetched from `https://openlibrary.org/search/authors.json?q=j%20k%20rowling`. 
+This endpoint was used to fetch the author's bio after a user search. 
+
+<img src='authorBioEndpoint.png' title='Postman img3' width='' alt='postman3'>
 
 
 ## Link to the webpage: https://shion1314.github.io/Web_Dev_assignment5/
