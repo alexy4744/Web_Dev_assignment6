@@ -5,7 +5,7 @@
 }
 
 .table-container {
-  max-height: 25vh; /* 25% of the viewport height */
+  max-height: 35vh; /* 25% of the viewport height */
   overflow: auto;
 }
 
