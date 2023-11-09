@@ -69,8 +69,8 @@ export default function AuthorBooks() {
             </tr>
           </thead>
           <tbody>
-            {author_Works.map((work, index) => (
-              <tr key={index}>
+            {author_Works.map((work) => (
+              <tr>
                 <td>{work.title}</td>
               </tr>
             ))}
