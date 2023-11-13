@@ -23,8 +23,8 @@ export default function App() {
           } else {
             setKey("");
           }
-        });
-      Clicked(false);
+        })
+        .finally(() => Clicked(false));
     }
   }, [Button_Clicked, User_Input]);
 
@@ -35,10 +35,9 @@ export default function App() {
   return (
     <main>
       <div className="searchBar">
-        <button style={{ marginLeft: "6px" }} onClick={(handleShowRandomBooks)}>
+        <button style={{ marginRight: "6px" }} onClick={(handleShowRandomBooks)}>
           {showRandomBooks ? "Hide Random Books" : "Show Random Books"}
         </button>
-
         <label style={{ marginRight: "6px" }}> Enter Author's Name:</label>
         <input type="text" value={User_Input} onChange={(name) => setName(name.target.value)} />
 
@@ -46,13 +45,13 @@ export default function App() {
           Search
         </button>
       </div>
-      {Author_Key ? (
+      {showRandomBooks && <RandomBooks />}
+      {Author_Key && (
         <>
           <AuthorBio Author_Key={Author_Key} />
           <AuthorBooks Author_Key={Author_Key} />
         </>
-      ) : showRandomBooks ? (<RandomBooks />) : null
-      }
+      )}
     </main>
   );
 }
