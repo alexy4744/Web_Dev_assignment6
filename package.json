@@ -1,12 +1,18 @@
 {
-  "homepage": "https://Shion1314.github.io/Web_Dev_assignment5",
+  "homepage": "https://alexy4744.github.io/Web_Dev_assignment6",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.7",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
     "react": "^18.0.0",
     "react-colorful": "^5.6.1",
     "react-dom": "^18.0.0",
+    "react-redux": "^8.1.3",
+    "react-router-dom": "^6.18.0",
     "react-scripts": "^5.0.0",
     "react-simple-star-rating": "^5.1.7",
-    "react-tiny-popover": "^8.0.4"
+    "react-tiny-popover": "^8.0.4",
+    "sort-by": "^1.2.0"
   },
   "main": "/index.js",
   "devDependencies": {
