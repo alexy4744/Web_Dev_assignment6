@@ -1,5 +1,8 @@
 ## Link to the webpage: https://alexy4744.github.io/Web_Dev_assignment6
 
+### Assignment 6 Extra Credit 
+URL parameter is used to identify the genre user has picked to generate random books. When a user pick a genre they want in the home page, that genre is added as the url parameter (e.g. `/random/fiction`) The random books page will call the Subject API based on the url parameter. 
+
 ## Open Library
 
 ### Author API
@@ -31,3 +34,12 @@ This endpoint was used to fetch the author's bio after a user search.
 The endpoint above returns the rating of a specific work, in this case the ID of the work is OL45804W. The average rating returned from this API call is used to display the star ratings of each work after the user has searched for an author.
 
 <img src='ratings_api.png' title='Screenshot of a successful API call to the ratings endpoint.' alt='Screenshot of a successful API call to the ratings endpoint.' />
+
+### Subject API 
+
+[Documentation Link](https://openlibrary.org/dev/docs/api/subjects)
+
+#### Endpoint: http://openlibrary.org/subjects/fiction.json
+The endpoint above fetch books that includes the subjects specified in the endpoint. In this case the endpoint is fetching books within the API that are categorized as fiction. This endpoint is used to generate random books based on the genre user has picked. 
+
+<img src='random-api.png' title='Screenshot of a successful API call to the subject endpoint.' alt='Screenshot of a successful API call to the subject endpoint.'>
