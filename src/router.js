@@ -33,7 +33,7 @@ export const router = createBrowserRouter(
           ],
         },
         {
-          path: "random-books",
+          path: "random-books/:genre",
           element: <RandomBooks />,
         },
       ],
