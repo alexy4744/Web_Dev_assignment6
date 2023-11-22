@@ -4,7 +4,7 @@ import { ErrorFallback } from "./components/ErrorFallback";
 
 import { Author } from "./pages/Author";
 import { AuthorBooks } from "./pages/AuthorBooks";
-import { Home } from "./pages/Home.js";
+import { Home } from "./pages/Home";
 import { RandomBooks } from "./pages/RandomBooks";
 
 export const router = createBrowserRouter(
